@@ -1,0 +1,28 @@
+.global-wrapper[data-is-root-path='true'] .bio {
+    margin-bottom: var(--spacing-20);
+}
+
+.bio {
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--color-accent) !important;
+    padding: 0 var(--spacing-6);
+}
+
+.name {
+    font-size: var(--fontSize-7);
+    margin-bottom: var(--spacing-5);
+    align-self: center;
+}
+
+.summary {
+    font-size: var(--fontSize-2);
+    margin-bottom: var(--spacing-12);
+}
+
+.avatar {
+    margin-bottom: var(--spacing-0);
+    min-width: 50px;
+    border-radius: 100%;
+    align-self: center;
+}

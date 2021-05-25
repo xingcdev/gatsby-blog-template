@@ -1,0 +1,37 @@
+.banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 90vh;
+	color: #333;
+}
+
+.content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	color: #fefefe;
+	position: absolute;
+}
+
+.summary {
+	flex: 0 1 50%;
+	padding-left: 0.8rem;
+}
+
+.author {
+	flex: 0 1 30%;
+	padding: 1rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+	.avatar {
+		display: none !important;
+	}
+}

@@ -1,0 +1,21 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: var(--fontSize-2);
+    transform: scale(1);
+    transition: transform 100ms ease-in;
+}
+
+.button:hover {
+    transform: scale(1.3);
+    transition: transform 100ms ease-in;
+}
+
+.button p {
+    margin-bottom: var(--spacing-0);
+}

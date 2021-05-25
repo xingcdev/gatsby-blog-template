@@ -1,0 +1,472 @@
+/* CSS Custom Properties Definitions */
+
+:root {
+	--maxWidth-wrapper: 900px;
+	--lineHeight-none: 1.1 1.1;
+	--lineHeight-normal: 1.5;
+	--lineHeight-relaxed: 1.625;
+	/* MY CUSTOM COLORS */
+	--logo: #f3b944;
+	--primary: var(--logo);
+	--text: rgb(71, 69, 69);
+	--bg-dark: #121a2b;
+	--bg-light: #fbfbfd;
+	--black: #000;
+	--body-fontSize: 1.5625rem; /* 25px */
+	--link: #227adf;
+}
+
+/* HTML elements */
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	line-height: var(--lineHeight-normal);
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
+@media screen and (min-width: 800px) {
+	html {
+		font-size: 109%;
+	}
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 1.2rem;
+	color: var(--text);
+	background: var(--bg-light);
+}
+
+footer {
+	padding: var(--spacing-6) 0;
+}
+
+hr {
+	background: var(--color-accent);
+	height: 1px;
+	border: 0;
+}
+
+/* Heading */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 2.5rem 0 1.5rem 0;
+	line-height: 1.1;
+	letter-spacing: -0.025em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	color: var(--black);
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2.6rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+h1 > a {
+	color: inherit;
+	text-decoration: none;
+}
+
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Prose */
+
+p {
+	line-height: var(--lineHeight-relaxed);
+	--baseline-multiplier: 0.179;
+	--x-height-multiplier: 0.35;
+	margin-bottom: 2rem;
+	padding: 0;
+}
+
+ul,
+ol {
+	margin: 0 0 2rem 0;
+	padding: 0;
+	list-style-position: outside;
+	list-style-image: none;
+}
+
+ul li,
+ol li {
+	padding-left: 0;
+	margin-bottom: calc(2rem / 2);
+}
+
+li > p {
+	margin-bottom: calc(2rem / 2);
+}
+
+li *:last-child {
+	margin-bottom: 0;
+}
+
+li > ul {
+	margin-left: 2rem;
+	margin-top: calc(2rem / 2);
+}
+
+code {
+	font-family: serif;
+	font-size: 0.99rem;
+	background-color: #e9ecef;
+	padding: 2px 5px;
+}
+
+pre {
+	background: #333;
+	overflow-x: auto;
+	font-family: monospace;
+	tab-size: 4;
+	-moz-tab-size: 4; /* Firefox */
+	border-radius: 5px;
+}
+
+pre code {
+	color: #fefefe;
+	background: none;
+	background: #333;
+}
+
+blockquote {
+	color: #4f5969;
+	margin-right: 2rem;
+	padding: 0 20px;
+	border-left: 0.25rem solid #aaaaaa;
+	font-size: 1.2rem;
+	font-style: italic;
+	margin-bottom: 2rem;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
+blockquote > ul,
+blockquote > ol {
+	list-style-position: inside;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 2rem;
+	border-collapse: collapse;
+	border-spacing: 0.25rem;
+}
+
+table thead tr th {
+	border-bottom: 1px solid var(--text);
+}
+
+/* Link */
+
+a {
+	color: var(--link);
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+/* Custom classes */
+
+.date {
+	text-transform: capitalize;
+	font-size: 1rem;
+}
+
+.centered-wrapper {
+	margin: 0 auto;
+	max-width: var(--maxWidth-wrapper);
+	padding: 2.5rem 0.5rem;
+}
+
+.global-header {
+	font-size: 1.728rem;
+	margin-bottom: 0;
+	border-bottom: solid 1px var(--text);
+	text-decoration: none;
+}
+
+.global-header a {
+	color: var(--text);
+	text-decoration: none;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1.25rem;
+}
+
+.logo a {
+	color: var(--logo);
+	font-size: 3rem;
+	margin: 0;
+}
+
+.gatsby-highlight {
+	margin-bottom: 2rem;
+}
+
+.gatsby-resp-image-figcaption {
+	margin-top: 0.25rem;
+	font-size: 1.2rem;
+	font-style: italic;
+	text-align: center;
+}
+
+/* Media queries */
+
+@media (max-width: 42rem) {
+	blockquote {
+		padding: 0 0 0 1rem;
+		margin-left: 0;
+	}
+	ul,
+	ol {
+		list-style-position: inside;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	margin: 2.5rem 0;
+
+	.cancelReplying {
+		color: #d33500;
+	}
+
+	input,
+	textarea {
+		min-width: 150px;
+		margin-bottom: 1.2rem;
+		border-radius: 5px;
+		border: solid 1px #333;
+		padding: 0.5rem;
+		height: 30px;
+		background-color: #e5e6e9;
+		outline: none; /* Remove focus border line*/
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.replyTo {
+		margin-bottom: 0.5rem;
+	}
+
+	textarea {
+		height: 150px;
+	}
+
+	.name {
+		width: 25%;
+	}
+
+	.email {
+		width: 40%;
+	}
+
+	.disclaimer {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	button {
+		cursor: pointer;
+		background-color: #333;
+		border: none;
+		color: #fff;
+		padding: 12px 0;
+		width: 20%;
+		min-width: 150px;
+		border-radius: 5px;
+		&:hover {
+			color: #000;
+			background-color: var(--logo);
+		}
+	}
+}
+
+.comments-thread {
+	margin: 5rem 0;
+
+	.title {
+		font-size: 3rem;
+		color: #fefefe;
+	}
+}
+
+.comments-section {
+	.username {
+		text-transform: capitalize;
+		font-weight: bold;
+		color: #333;
+	}
+
+	.date {
+		color: #5a5b5c;
+	}
+
+	.comment {
+		margin-bottom: 2rem;
+
+		header {
+			margin-bottom: 1rem;
+		}
+
+		.parent {
+			margin-bottom: 1rem;
+			border: solid 1px rgb(93, 93, 93);
+			padding: 1rem;
+			border-radius: 10px;
+		}
+
+		.reply {
+			margin-left: 3rem;
+			padding: 1rem 1rem 0rem 1rem;
+			word-break: break-word;
+			border-bottom: solid 1px rgb(93, 93, 93);
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		button {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			font-size: 14px;
+			padding: 4px 8px;
+			color: rgba(0, 0, 0, 0.85);
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			border-radius: 4px;
+		}
+		button:hover,
+		button:focus,
+		button:active {
+			cursor: pointer;
+			background-color: #ecf0f1;
+		}
+	}
+}
+
+.popup-box {
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 90%;
+	max-width: 400px;
+	background-color: #fefefe;
+	color: #333;
+	padding: 0.5rem;
+	overflow: hidden;
+	border-radius: 10px;
+	z-index: 100;
+
+	.icon {
+		margin-right: 0.9rem;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	&.moveUp {
+		animation: moveUp ease-in 0.5s;
+	}
+
+	&.moveDown {
+		transform: translate(
+			-50%,
+			150px
+		); /* Stay out of the page when the animation is done,  */
+		animation: moveDown ease-in 0.5s;
+	}
+
+	@keyframes moveUp {
+		0% {
+			transform: translate(-50%, 150px);
+		}
+		100% {
+			transform: translate(-50%, 0);
+		}
+	}
+
+	@keyframes moveDown {
+		0% {
+			transform: translate(-50%, 0);
+		}
+		100% {
+			transform: translate(-50%, 150px);
+		}
+	}
+}
+
+.spin {
+	animation: spin 2s infinite linear;
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(359deg);
+		}
+	}
+}
